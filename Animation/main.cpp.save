@@ -55,11 +55,27 @@ struct Mario
     }
 
 };
+struct Barrier
+{
+    int x;
+    int y;
+
+    void draw()
+    {
+        txSetColor(TX_BLACK);
+        txSetFillColor(TX_RED);
+        txRectangle(x,y,x+20,y+50);
+    }
+
+} ;
 
 int main()
 {
 txCreateWindow (800, 600);
 txTextCursor (false);
+Barrier bar[2];
+ bar[0] = {200,50};
+ bar[1] = {500,50};
 
 Mario mario = {0, 300, 5, txLoadImage("Pictures/mario_r.bmp"), txLoadImage("Pictures/mario_l.bmp"), txLoadImage("Pictures/mario_r.bmp"), 0, 0};
 //Массив
@@ -74,6 +90,12 @@ Mario mario_bot[5];
     {
         txClear();
         txBegin();
+        for(int i=0; i<2; i++)
+        {
+        bar[0].draw();
+        bar[1].draw();
+        }
+        txSetFillColor(TX_WHITE);
     //главный герой
         mario.draw();
         if (GetAsyncKeyState(VK_RIGHT))
@@ -95,7 +117,7 @@ Mario mario_bot[5];
         mario_bot[i].draw();
         mario_bot[i].animation();
         mario_bot[i].x += mario_bot[i].vx;
-        if (mario_bot[i].x>800-84)
+        if (mario_bot[i].x>800-84 )
         {
             mario_bot[i].vx = -mario_bot[i].vx;
             mario_bot[i].image = mario_bot[i].image_l;
@@ -105,6 +127,12 @@ Mario mario_bot[5];
             mario_bot[i].vx = -mario_bot[i].vx;
             mario_bot[i].image = mario_bot[i].image_r;
         }
+        }
+        
+         if (mario_bot[i].x<bar[0].x+20)
+        {
+            mario_bot[i].vx = -mario_bot[i].vx;
+            mario_bot[i].image = mario_bot[i].image_r;
         }
         txEnd();
         txSleep(30);
