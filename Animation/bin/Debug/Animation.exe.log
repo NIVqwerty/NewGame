@@ -1,0 +1,255 @@
+
+--------------------------------------------------
+TXLib сообщает:
+
+Программа: C:\Инженерка\Project Game\Animation\bin\Debug\Animation.exe, файл: c:\ded32\codeblocks\mingw\include\txlib.h, строка: 13772, функция: bool {anonymous}::TX::txTransparentBlt(HDC, double, double, double, double, HDC, double, double, COLORREF),
+
+Сообщение: Прямоугольник копируемой области {504, 0, 588, 107} не полностью лежит внутри изображения-источника {0, 0, 504, 428}, функция txTransparentBlt() работать не будет.
+
+#1: TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400], Instance: 0x005062FC (32-bit), Flags: CMdRe0, Thread: 0x3A90 (Main), GetLastError(): 13 (Недопустимые данные). 
+From: c:\ded32\codeblocks\mingw\include\txlib.h:13771 bool {anonymous}::TX::txTransparentBlt(HDC, double, double, double, double, HDC, double, double, COLORREF).
+
+--------------------------------------------------
+Стек вызовов:
+
+
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in bool {anonymous}::TX::txTransparentBlt(HDC, double, double, double, double, HDC, double, double, COLORREF) at c:\ded32\codeblocks\mingw\include\txlib.h:13771:
+
+  13769:         {
+  13770: $       SetLastError (ERROR_INVALID_DATA);
+=>13771: $       TX_ERROR ("Прямоугольник копируемой области {%g, %g, %g, %g} не полностью лежит внутри изображения-источника {%d, %d, %d, %d}, "
+  13772:                   "функция txTransparentBlt() работать не будет.", xSource, ySource, xSource + width, ySource + height, 0, 0, (int) size.x, (int) size.y);
+  13773:         }
+
+# 1 in int main() at C:\Инженерка\Project Game\Animation\main.cpp:39:
+
+     37:         txBegin();
+     38: 
+=>   39:         txTransparentBlt(txDC(), 100, 300, 84, 107, image, 84*6, 0, TX_WHITE);
+     40: 
+     41:         txEnd();
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\ded32\codeblocks\mingw\include\txlib.h
+Compiled:	Dec 10 2024 18:34:44, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Dec 10 2024 18:34:54
+
+Run file:	C:\Инженерка\Project Game\Animation\bin\Debug\Animation.exe
+Directory:	C:\Инженерка\Project Game\Animation
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib сообщает:
+
+Программа: C:\Инженерка\Project Game\Animation\bin\Debug\Animation.exe, файл: c:\ded32\codeblocks\mingw\include\txlib.h, строка: 13772, функция: bool {anonymous}::TX::txTransparentBlt(HDC, double, double, double, double, HDC, double, double, COLORREF),
+
+Сообщение: Прямоугольник копируемой области {504, 0, 588, 107} не полностью лежит внутри изображения-источника {0, 0, 504, 428}, функция txTransparentBlt() работать не будет.
+
+#1: TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400], Instance: 0x005062FC (32-bit), Flags: CMdRe0, Thread: 0x3CCC (Main), GetLastError(): 13 (Недопустимые данные). 
+From: c:\ded32\codeblocks\mingw\include\txlib.h:13771 bool {anonymous}::TX::txTransparentBlt(HDC, double, double, double, double, HDC, double, double, COLORREF).
+
+--------------------------------------------------
+Стек вызовов:
+
+
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in bool {anonymous}::TX::txTransparentBlt(HDC, double, double, double, double, HDC, double, double, COLORREF) at c:\ded32\codeblocks\mingw\include\txlib.h:13771:
+
+  13769:         {
+  13770: $       SetLastError (ERROR_INVALID_DATA);
+=>13771: $       TX_ERROR ("Прямоугольник копируемой области {%g, %g, %g, %g} не полностью лежит внутри изображения-источника {%d, %d, %d, %d}, "
+  13772:                   "функция txTransparentBlt() работать не будет.", xSource, ySource, xSource + width, ySource + height, 0, 0, (int) size.x, (int) size.y);
+  13773:         }
+
+# 1 in int main() at C:\Инженерка\Project Game\Animation\main.cpp:39:
+
+     37:         txBegin();
+     38: 
+=>   39:         txTransparentBlt(txDC(), 100, 300, 84, 107, image, 84*n_cadr, 0, TX_WHITE);
+     40:         n_cadr+=1;
+     41:         txEnd();
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\ded32\codeblocks\mingw\include\txlib.h
+Compiled:	Dec 10 2024 18:37:50, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Dec 10 2024 18:38:00
+
+Run file:	C:\Инженерка\Project Game\Animation\bin\Debug\Animation.exe
+Directory:	C:\Инженерка\Project Game\Animation
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib сообщает:
+
+Программа: C:\Инженерка\Project Game\Animation\bin\Debug\Animation.exe, файл: c:\ded32\codeblocks\mingw\include\txlib.h, строка: 13772, функция: bool {anonymous}::TX::txTransparentBlt(HDC, double, double, double, double, HDC, double, double, COLORREF),
+
+Сообщение: Прямоугольник копируемой области {0, 428, 84, 535} не полностью лежит внутри изображения-источника {0, 0, 504, 428}, функция txTransparentBlt() работать не будет.
+
+#1: TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400], Instance: 0x005062FC (32-bit), Flags: CMdRe0, Thread: 0x2EA4 (Main), GetLastError(): 13 (Недопустимые данные). 
+From: c:\ded32\codeblocks\mingw\include\txlib.h:13771 bool {anonymous}::TX::txTransparentBlt(HDC, double, double, double, double, HDC, double, double, COLORREF).
+
+--------------------------------------------------
+Стек вызовов:
+
+
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in bool {anonymous}::TX::txTransparentBlt(HDC, double, double, double, double, HDC, double, double, COLORREF) at c:\ded32\codeblocks\mingw\include\txlib.h:13771:
+
+  13769:         {
+  13770: $       SetLastError (ERROR_INVALID_DATA);
+=>13771: $       TX_ERROR ("Прямоугольник копируемой области {%g, %g, %g, %g} не полностью лежит внутри изображения-источника {%d, %d, %d, %d}, "
+  13772:                   "функция txTransparentBlt() работать не будет.", xSource, ySource, xSource + width, ySource + height, 0, 0, (int) size.x, (int) size.y);
+  13773:         }
+
+# 1 in int main() at C:\Инженерка\Project Game\Animation\main.cpp:40:
+
+     38:         txBegin();
+     39: 
+=>   40:         txTransparentBlt(txDC(), 100, 300, 84, 107, image, 84*x_cadr,107*y_cadr, TX_WHITE);
+     41:         x_cadr+=1;
+     42:         if(x_cadr >=5)
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\ded32\codeblocks\mingw\include\txlib.h
+Compiled:	Dec 10 2024 18:46:17, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Dec 10 2024 18:46:27
+
+Run file:	C:\Инженерка\Project Game\Animation\bin\Debug\Animation.exe
+Directory:	C:\Инженерка\Project Game\Animation
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib сообщает:
+
+Программа: C:\Инженерка\Project Game\Animation\bin\Debug\Animation.exe, файл: c:\ded32\codeblocks\mingw\include\txlib.h, строка: 13772, функция: bool {anonymous}::TX::txTransparentBlt(HDC, double, double, double, double, HDC, double, double, COLORREF),
+
+Сообщение: Прямоугольник копируемой области {504, 0, 588, 107} не полностью лежит внутри изображения-источника {0, 0, 504, 428}, функция txTransparentBlt() работать не будет.
+
+#1: TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400], Instance: 0x005062FC (32-bit), Flags: CMdRe0, Thread: 0x1FDC (Main), GetLastError(): 13 (Недопустимые данные). 
+From: c:\ded32\codeblocks\mingw\include\txlib.h:13771 bool {anonymous}::TX::txTransparentBlt(HDC, double, double, double, double, HDC, double, double, COLORREF).
+
+--------------------------------------------------
+Стек вызовов:
+
+
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in bool {anonymous}::TX::txTransparentBlt(HDC, double, double, double, double, HDC, double, double, COLORREF) at c:\ded32\codeblocks\mingw\include\txlib.h:13771:
+
+  13769:         {
+  13770: $       SetLastError (ERROR_INVALID_DATA);
+=>13771: $       TX_ERROR ("Прямоугольник копируемой области {%g, %g, %g, %g} не полностью лежит внутри изображения-источника {%d, %d, %d, %d}, "
+  13772:                   "функция txTransparentBlt() работать не будет.", xSource, ySource, xSource + width, ySource + height, 0, 0, (int) size.x, (int) size.y);
+  13773:         }
+
+# 1 in int main() at C:\Инженерка\Project Game\Animation\main.cpp:47:
+
+     45:         txBegin();
+     46: 
+=>   47:         txTransparentBlt(txDC(), x, 300, 84, 107, image, 84*x_cadr,107*y_cadr, TX_WHITE);
+     48: 
+     49:             if(GetAsyncKeyState(VK_LEFT))
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\ded32\codeblocks\mingw\include\txlib.h
+Compiled:	Dec 10 2024 19:10:31, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Dec 10 2024 19:10:41
+
+Run file:	C:\Инженерка\Project Game\Animation\bin\Debug\Animation.exe
+Directory:	C:\Инженерка\Project Game\Animation
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib сообщает:
+
+Программа: C:\Инженерка\Project Game\Animation\bin\Debug\Animation.exe, файл: c:\ded32\codeblocks\mingw\include\txlib.h, строка: 13772, функция: bool {anonymous}::TX::txTransparentBlt(HDC, double, double, double, double, HDC, double, double, COLORREF),
+
+Сообщение: Прямоугольник копируемой области {504, 0, 588, 107} не полностью лежит внутри изображения-источника {0, 0, 504, 428}, функция txTransparentBlt() работать не будет.
+
+#1: TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400], Instance: 0x005062FC (32-bit), Flags: CMdRe0, Thread: 0x3120 (Main), GetLastError(): 13 (Недопустимые данные). 
+From: c:\ded32\codeblocks\mingw\include\txlib.h:13771 bool {anonymous}::TX::txTransparentBlt(HDC, double, double, double, double, HDC, double, double, COLORREF).
+
+--------------------------------------------------
+Стек вызовов:
+
+
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in bool {anonymous}::TX::txTransparentBlt(HDC, double, double, double, double, HDC, double, double, COLORREF) at c:\ded32\codeblocks\mingw\include\txlib.h:13771:
+
+  13769:         {
+  13770: $       SetLastError (ERROR_INVALID_DATA);
+=>13771: $       TX_ERROR ("Прямоугольник копируемой области {%g, %g, %g, %g} не полностью лежит внутри изображения-источника {%d, %d, %d, %d}, "
+  13772:                   "функция txTransparentBlt() работать не будет.", xSource, ySource, xSource + width, ySource + height, 0, 0, (int) size.x, (int) size.y);
+  13773:         }
+
+# 1 in int main() at C:\Инженерка\Project Game\Animation\main.cpp:47:
+
+     45:         txBegin();
+     46: 
+=>   47:         txTransparentBlt(txDC(), x, 300, 84, 107, image, 84*x_cadr,107*y_cadr, TX_WHITE);
+     48: 
+     49:             if(GetAsyncKeyState(VK_LEFT))
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\ded32\codeblocks\mingw\include\txlib.h
+Compiled:	Dec 10 2024 19:10:51, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Dec 10 2024 19:11:01
+
+Run file:	C:\Инженерка\Project Game\Animation\bin\Debug\Animation.exe
+Directory:	C:\Инженерка\Project Game\Animation
+
+--------------------------------------------------
