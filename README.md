@@ -1,2 +1,2 @@
-# symmetrical-engine
+# new game
 Подготовка
